@@ -25,25 +25,12 @@ public class Main {
 
         // Задача 3
         System.out.println("Задача 3");
-        int year = 2021; // високосный год начался с 1984
-        switch (year) {
-            case 1984:
-            case 1988:
-            case 1992:
-            case 1996:
-            case 2000:
-            case 2004:
-            case 2008:
-            case 2012:
-            case 2016:
-            case 2020:
-            case 2024:
-                System.out.println(year + " год является високосным");
-                break;
-            default:
-                System.out.println(year + " год не является високосным");
+        int year = 2021; // високосный год начался с 1854
+        if ((year > 1584) && (year % 4 == 0) && (year % 100 != 0 || year % 400 == 0)) {
+            System.out.println(year + " год является високосным");
+        } else {
+            System.out.println( year + " год не является високосным");
         }
-
         // Задача 4
         System.out.println("Задача 4");
         int deliveryDistance = 95;

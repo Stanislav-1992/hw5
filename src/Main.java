@@ -3,24 +3,31 @@ public class Main {
         // Задача 1
         System.out.println("Задача 1");
         int clientOS = 1;
-        switch (clientOS) {
-            case 0:
-                System.out.println("Установите версию приложения для iOS по ссылке");
-                break;
-            case 1:
-                System.out.println("Установите версию приложения для Android по ссылке");
-                break;
-            default:
+        int iOS = 0;
+        int android = 1;
+        if (clientOS == iOS) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        }
+        else if (clientOS == android) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        } else {
                 System.out.println("Такой версии приложения нет");
         }
 
         // Задача 2
         System.out.println("Задача 2");
         int clientDeviceYear = 2015;
-        if (clientDeviceYear < 2015) {
+        int edgeDiviceYear = 2015;
+        if (clientDeviceYear < edgeDiviceYear && clientOS == iOS) {
+            System.out.println("Установите облегченную версию приложения для IOS по ссылке");
+        } else if (clientDeviceYear >= edgeDiviceYear && clientOS == iOS) {
+            System.out.println("Установите версию приложения для IOS по ссылке");
+        } else if (clientDeviceYear < edgeDiviceYear && clientOS == android) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        } else {
+        } else if (clientDeviceYear >= edgeDiviceYear && clientOS == android) {
             System.out.println("Установите версию приложения для Android по ссылке");
+        } else {
+            System.out.println("Такой версии приложения нет");
         }
 
         // Задача 3
